@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a class="nav-home" href="#inicio" aria-current="page">Portafolio</a>
+            <details class="nav-dropdown">
+                <summary>Actividad Individual</summary>
+                <div class="dropdown-menu">
+                    <a href="#kfc">KFC</a>
+                    <a href="#rueda-libre">Rueda Libre</a>
+                </div>
+            </details>
+            <details class="nav-dropdown">
+                <summary>Actividades Grupales</summary>
+                <div class="dropdown-menu">
+                    <a href="#ia">IA</a>
+                    <a href="#">Biblioweb</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Quien soy</h1>
+            <p>Alexander Ruiz considero que tengo ciertos conocimientos sobre algunos lenguajes de programacion, en el pasado he visto HTML, CSS, Javascript, estuve en semilleros de C++, y uso de Python POO <br>Me interesa mucho el desarrollo de software desde muy joven, en el momento quisiera poder tener la oportunidad de aprender react, angular, me llaman la atencion <br>En cuanto a experiencia laboral he realizado paginas web para conocidos que han tenido emprendimientos, todo para promover su visibilidad y publico</p>
+        </section>
+
+        <section class="proyectos" id="actividades-individuales">
+            <h2>Actividades individuales</h2>
+            <div class="proyecto-grid">
+                <article class="proyecto" id="kfc">
+                    <h3>KFC</h3>
+                    <img src="img/kfc.png" alt="Captura del proyecto de sitio web para KFC" loading="lazy">
+                </article>
+                <article class="proyecto" id="rueda-libre">
+                    <h3>Rueda Libre</h3>
+                    <img src="img/rueda libre.png" alt="Captura del proyecto de sitio web Rueda Libre" loading="lazy">
+                </article>
+            </div>
+        </section>
+
+        <section class="proyectos" id="actividades-grupales">
+            <h2>Actividades grupales</h2>
+            <div class="proyecto-grid">
+                <article class="proyecto" id="ia">
+                    <h3>IA</h3>
+                    <img src="img/IA.png" alt="Captura del proyecto grupal de inteligencia artificial" loading="lazy">
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
