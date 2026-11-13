@@ -1,11 +1,10 @@
 :root {
-    color-scheme: light;
-    --ink: #172a2a;
-    --muted: #526565;
-    --paper: #f5f7f2;
-    --surface: #ffffff;
-    --accent: #c45034;
-    --line: #d7dfd8;
+    --texto: #172a2a;
+    --texto-suave: #526565;
+    --fondo: #f5f7f2;
+    --blanco: #ffffff;
+    --acento: #c45034;
+    --borde: #d7dfd8;
 }
 
 * {
@@ -15,18 +14,18 @@
 body {
     min-width: 320px;
     margin: 0;
-    color: var(--ink);
-    background: var(--paper);
+    color: var(--texto);
+    background: var(--fondo);
     font-family: "Trebuchet MS", sans-serif;
     line-height: 1.7;
 }
 
 header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--line);
+    background: var(--blanco);
+    border-bottom: 1px solid var(--borde);
 }
 
-.site-nav {
+.menu {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -36,37 +35,36 @@ header {
     padding: 0 1.5rem;
 }
 
-.site-nav a,
-.nav-dropdown summary {
+.menu a, .desplegable summary {
     display: block;
     padding: 0.65rem 0.9rem;
-    color: var(--muted);
+    color: var(--texto-suave);
     font-size: 0.95rem;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
 }
 
-.site-nav .nav-home {
+.menu .menu-inicio {
     margin-right: auto;
-    color: var(--accent);
+    color: var(--acento);
     font-family: Georgia, serif;
     font-size: 1.25rem;
 }
 
-.nav-dropdown {
+.desplegable {
     position: relative;
 }
 
-.nav-dropdown summary {
+.desplegable summary {
     list-style: none;
 }
 
-.nav-dropdown summary::-webkit-details-marker {
+.desplegable summary::-webkit-details-marker {
     display: none;
 }
 
-.nav-dropdown summary::after {
+.desplegable summary::after {
     display: inline-block;
     width: 0;
     height: 0;
@@ -77,38 +75,35 @@ header {
     transform: translateY(2px);
 }
 
-.nav-dropdown[open] summary::after {
+.desplegable[open] summary::after {
     border-top-color: transparent;
     border-bottom-color: currentColor;
     transform: translateY(-2px);
 }
 
-.site-nav a:hover,
-.nav-dropdown summary:hover,
-.nav-dropdown summary:focus-visible {
-    color: var(--accent);
+.menu a:hover, .desplegable summary:hover, .desplegable summary:focus-visible {
+    color: var(--acento);
 }
 
-.dropdown-menu {
+.submenu {
     position: absolute;
     z-index: 1;
     top: calc(100% + 0.35rem);
     left: 0;
     min-width: 190px;
     padding: 0.4rem;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    box-shadow: 0 12px 28px rgb(23 42 42 / 10%);
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    box-shadow: 0 12px 28px rgba(23, 42, 42, 0.1);
 }
 
-.dropdown-menu a {
+.submenu a {
     border-radius: 3px;
 }
 
-.dropdown-menu a:hover,
-.dropdown-menu a:focus-visible {
-    color: var(--accent);
-    background: var(--paper);
+.submenu a:hover, .submenu a:focus-visible {
+    color: var(--acento);
+    background: var(--fondo);
 }
 
 main {
@@ -121,12 +116,12 @@ section {
     max-width: 760px;
 }
 
-.proyecto-section {
+.proyectos {
     max-width: none;
     margin-top: 5rem;
 }
 
-.proyecto-section h2 {
+.proyectos h2 {
     margin: 0 0 1.5rem;
     font-family: Georgia, serif;
     font-size: 2rem;
@@ -142,8 +137,8 @@ section {
 .proyecto {
     min-width: 0;
     padding: 1rem;
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: var(--blanco);
+    border: 1px solid var(--borde);
 }
 
 .proyecto h3 {
@@ -159,7 +154,7 @@ section {
 
 h1 {
     margin: 0 0 1.25rem;
-    color: var(--ink);
+    color: var(--texto);
     font-family: Georgia, serif;
     font-size: 4.5rem;
     font-weight: 400;
@@ -168,13 +163,15 @@ h1 {
 
 p {
     margin: 0;
-    color: var(--muted);
+    color: var(--texto-suave);
     font-size: 1.05rem;
 }
 
-@media (max-width: 700px) {
-    .proyecto
--grid {
-        grid-template-columns: 1fr;
-    }
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1e40af;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
 }
